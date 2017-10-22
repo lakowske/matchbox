@@ -26,6 +26,15 @@ systemd:
             Environment="ETCD_PEER_CLIENT_CERT_AUTH=true"
     - name: docker.service
       enable: true
+    - name: 00-eth0.network
+      runtime: true
+      content: |
+        [Match]
+        Name=ens4
+
+        [Network]
+        DNS=8.8.8.8
+        Address=69.30.216.27
     - name: locksmithd.service
       mask: true
     - name: kubelet.path
