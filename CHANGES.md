@@ -7,10 +7,11 @@ Notable changes between releases.
 * Add gRPC API endpoints for managing generic (experimental) templates
 * Remove Profile `Cmdline` map (deprecated in v0.5.0), use `Args` slice instead
 * Remove pixiecore support (deprecated in v0.5.0)
+* Remove `ContextHandler`, `ContextHandlerFunc`, and `NewHandler` from the `matchbox/http` package.
 
 ### Examples / Modules
 
-* Upgrade Kubernetes v1.7.3 example clusters
+* Upgrade Kubernetes v1.7.7 example clusters
 * Kubernetes examples clusters enable etcd TLS
 * Deploy the Container Linux Update Operator (CLUO) to coordinate reboots of Container Linux nodes in Kubernetes clusters. See the cluster [addon docs](Documentation/cluster-addons.md).
 * Kubernetes examples (terraform and non-terraform) mask locksmithd

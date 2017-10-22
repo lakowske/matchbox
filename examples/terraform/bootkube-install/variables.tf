@@ -62,6 +62,12 @@ variable "k8s_domain_name" {
   type        = "string"
 }
 
+variable "networking" {
+  description = "Choice of networking provider (flannel or calico)"
+  type        = "string"
+  default     = "flannel"
+}
+
 variable "asset_dir" {
   description = "Path to a directory where generated assets should be placed (contains secrets)"
   type        = "string"
@@ -101,9 +107,4 @@ variable "container_linux_oem" {
   type        = "string"
   default     = ""
   description = "Specify an OEM image id to use as base for the installation (e.g. ami, vmware_raw, xen) or leave blank for the default image"
-}
-
-variable "experimental_self_hosted_etcd" {
-  default     = "false"
-  description = "Create self-hosted etcd cluster as pods on Kubernetes, instead of on-hosts"
 }
